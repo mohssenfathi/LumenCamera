@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LMNSlider" customModule="Lumen" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="BsP-vT-CMK"/>
+                <outlet property="panGesture" destination="fxw-ll-SFa" id="jox-B3-TUw"/>
+                <outlet property="thumbLeadingConstraint" destination="7yp-Bx-hqo" id="eJE-lg-Ycu"/>
+                <outlet property="thumbTouchView" destination="86y-zL-6M3" id="ldY-yj-Ue1"/>
+                <outlet property="thumbView" destination="WRg-di-2SE" id="c4E-bE-b6l"/>
+                <outlet property="thumbWidthConstraint" destination="qEM-4b-EhU" id="94I-E0-tsp"/>
+                <outlet property="trackView" destination="0MQ-2M-dpx" id="AAT-ZD-p8t"/>
+                <outlet property="trackViewLeadingConstraint" destination="ssl-FV-zsw" id="fiS-Bp-357"/>
+                <outlet property="trackViewTrailingConstraint" destination="dnK-2x-pt1" id="Mlh-E4-Kas"/>
+                <outlet property="trackWidthConstraint" destination="tHq-Yz-X77" id="7nv-1D-i0z"/>
+                <outlet property="valueTrack" destination="0wi-lv-MTx" id="CkB-bF-uZj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MQ-2M-dpx">
+                    <rect key="frame" x="0.0" y="331.5" width="375" height="3"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="tHq-Yz-X77"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wi-lv-MTx">
+                    <rect key="frame" x="0.0" y="332.5" width="375" height="3"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRg-di-2SE">
+                    <rect key="frame" x="122.5" y="306" width="54" height="54"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye5-1e-LO1">
+                            <rect key="frame" x="27.5" y="26.5" width="1" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="DnX-CI-3Af"/>
+                                <constraint firstAttribute="height" constant="1" id="uWG-4r-E2K"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ye5-1e-LO1" firstAttribute="centerY" secondItem="WRg-di-2SE" secondAttribute="centerY" id="D1S-mj-lLc"/>
+                        <constraint firstItem="ye5-1e-LO1" firstAttribute="centerX" secondItem="WRg-di-2SE" secondAttribute="centerX" constant="1" id="U6b-cw-XtD"/>
+                        <constraint firstAttribute="width" secondItem="WRg-di-2SE" secondAttribute="height" multiplier="1:1" id="Vyh-YD-4Li"/>
+                        <constraint firstAttribute="width" constant="54" id="qEM-4b-EhU"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86y-zL-6M3">
+                    <rect key="frame" x="114.5" y="298" width="70" height="70"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="ctI-fM-IEL"/>
+                        <constraint firstAttribute="width" constant="70" id="tPG-97-1gZ"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="fxw-ll-SFa" appends="YES" id="mfc-VT-iOO"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="WRg-di-2SE" firstAttribute="centerY" secondItem="0MQ-2M-dpx" secondAttribute="centerY" id="3pp-yB-Lmp"/>
+                <constraint firstItem="ye5-1e-LO1" firstAttribute="leading" secondItem="0MQ-2M-dpx" secondAttribute="leading" constant="150" id="7yp-Bx-hqo"/>
+                <constraint firstItem="0wi-lv-MTx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Hc7-fF-GtS"/>
+                <constraint firstItem="86y-zL-6M3" firstAttribute="centerY" secondItem="WRg-di-2SE" secondAttribute="centerY" id="Mbz-xx-YpM"/>
+                <constraint firstItem="0wi-lv-MTx" firstAttribute="trailing" secondItem="0MQ-2M-dpx" secondAttribute="trailing" id="SAg-hp-3VT"/>
+                <constraint firstItem="86y-zL-6M3" firstAttribute="centerX" secondItem="WRg-di-2SE" secondAttribute="centerX" id="Xy8-21-PpT"/>
+                <constraint firstItem="0wi-lv-MTx" firstAttribute="leading" secondItem="0MQ-2M-dpx" secondAttribute="leading" id="ZBU-rR-nCb"/>
+                <constraint firstItem="0wi-lv-MTx" firstAttribute="height" secondItem="0MQ-2M-dpx" secondAttribute="height" id="dMY-13-YOG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0MQ-2M-dpx" secondAttribute="trailing" id="dnK-2x-pt1"/>
+                <constraint firstItem="0MQ-2M-dpx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lKP-Tm-uMM"/>
+                <constraint firstItem="0wi-lv-MTx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ssl-FV-zsw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="fxw-ll-SFa">
+            <connections>
+                <action selector="handlePan:" destination="-1" id="L6A-0l-5Hz"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+</document>

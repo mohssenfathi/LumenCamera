@@ -1,0 +1,1086 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		452B58F320548BC000099CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B58F220548BC000099CAE /* AppDelegate.swift */; };
+		452B58F820548BC000099CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452B58F620548BC000099CAE /* Main.storyboard */; };
+		452B58FB20548BC000099CAE /* LumenCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 452B58F920548BC000099CAE /* LumenCamera.xcdatamodeld */; };
+		452B590020548BC100099CAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452B58FE20548BC100099CAE /* LaunchScreen.storyboard */; };
+		452B591020548BDB00099CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452B590820548BDB00099CAE /* Assets.xcassets */; };
+		452B591120548BDB00099CAE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B590B20548BDB00099CAE /* BaseViewController.swift */; };
+		452B591220548BDB00099CAE /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B590C20548BDB00099CAE /* RootViewController.swift */; };
+		452B591320548BDB00099CAE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B590E20548BDB00099CAE /* CameraViewController.swift */; };
+		452B591E20548CFF00099CAE /* PhotoLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 452B591C20548CFF00099CAE /* PhotoLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		452B592120548CFF00099CAE /* PhotoLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452B591A20548CFF00099CAE /* PhotoLibrary.framework */; };
+		452B592220548CFF00099CAE /* PhotoLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 452B591A20548CFF00099CAE /* PhotoLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		452B592B20548D1E00099CAE /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B592820548D1E00099CAE /* PhotoLibrary.swift */; };
+		452B592C20548D1E00099CAE /* DataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B592920548D1E00099CAE /* DataSources.swift */; };
+		452B593620548D9700099CAE /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B593320548D9700099CAE /* AlbumViewController.swift */; };
+		452B593720548D9700099CAE /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B593420548D9700099CAE /* PhotosViewController.swift */; };
+		452B593820548D9700099CAE /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B593520548D9700099CAE /* AlbumsViewController.swift */; };
+		452B593D20548DEE00099CAE /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452B593920548DEE00099CAE /* Camera.storyboard */; };
+		452B593E20548DEE00099CAE /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452B593B20548DEE00099CAE /* Library.storyboard */; };
+		452B594820548E9A00099CAE /* Tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 452B594620548E9A00099CAE /* Tools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		452B594B20548E9A00099CAE /* Tools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452B594420548E9A00099CAE /* Tools.framework */; };
+		452B594C20548E9A00099CAE /* Tools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 452B594420548E9A00099CAE /* Tools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		452B595320548EAE00099CAE /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595020548EAD00099CAE /* Tools.swift */; };
+		452B595420548EAE00099CAE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595120548EAD00099CAE /* UIImage.swift */; };
+		452B595520548EAE00099CAE /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595220548EAD00099CAE /* CoreGraphics.swift */; };
+		452B596020548EFD00099CAE /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595820548EFD00099CAE /* FilterCell.swift */; };
+		452B596220548EFD00099CAE /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595A20548EFD00099CAE /* PhotoCell.swift */; };
+		452B596320548EFD00099CAE /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595B20548EFD00099CAE /* AlbumCell.swift */; };
+		452B596520548EFD00099CAE /* ViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595D20548EFD00099CAE /* ViewControllerCell.swift */; };
+		452B596620548EFD00099CAE /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B595E20548EFD00099CAE /* LibraryCell.swift */; };
+		452B596920548F6C00099CAE /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B596820548F6B00099CAE /* ThemeManager.swift */; };
+		452B597120548F8F00099CAE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B596B20548F8F00099CAE /* UIView.swift */; };
+		452B597220548F8F00099CAE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B596C20548F8F00099CAE /* UIColor.swift */; };
+		452B597320548F8F00099CAE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B596D20548F8F00099CAE /* String.swift */; };
+		452B597420548F8F00099CAE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B596E20548F8F00099CAE /* UIButton.swift */; };
+		452B597520548F8F00099CAE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B596F20548F8F00099CAE /* UIImage.swift */; };
+		452B597620548F8F00099CAE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B597020548F8F00099CAE /* UILabel.swift */; };
+		452B598420548FBE00099CAE /* DialSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452B597820548FBE00099CAE /* DialSlider.xib */; };
+		452B598520548FBE00099CAE /* LMNSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452B597920548FBE00099CAE /* LMNSlider.xib */; };
+		452B598620548FBE00099CAE /* PanSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B597A20548FBE00099CAE /* PanSlider.swift */; };
+		452B598720548FBE00099CAE /* LMNSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B597B20548FBE00099CAE /* LMNSlider.swift */; };
+		452B598820548FBE00099CAE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B597C20548FBE00099CAE /* CardView.swift */; };
+		452B598920548FBE00099CAE /* DialSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B597D20548FBE00099CAE /* DialSlider.swift */; };
+		452B598A20548FBE00099CAE /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B597E20548FBE00099CAE /* AlbumView.swift */; };
+		452B598B20548FBE00099CAE /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B597F20548FBE00099CAE /* Labels.swift */; };
+		452B598C20548FBE00099CAE /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B598020548FBE00099CAE /* ImageGridView.swift */; };
+		452B598E20548FBE00099CAE /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B598220548FBE00099CAE /* Divider.swift */; };
+		452B59922054902900099CAE /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B59912054902900099CAE /* Animations.swift */; };
+		452B5996205498FB00099CAE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B5995205498FB00099CAE /* RootCoordinator.swift */; };
+		452B599820556A3400099CAE /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B599720556A3400099CAE /* CameraManager.swift */; };
+		4573CFD2205A04C2002041D6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFD1205A04C2002041D6 /* Preferences.swift */; };
+		4573CFD5205A0D09002041D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFD4205A0D09002041D6 /* SettingsViewController.swift */; };
+		4573CFD9205A0EFB002041D6 /* SlideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFD7205A0EFB002041D6 /* SlideButton.swift */; };
+		4573CFDA205A0EFB002041D6 /* PMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFD8205A0EFB002041D6 /* PMButton.swift */; };
+		45BFB1D120557903005B5E4F /* CaptureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BFB1D020557903005B5E4F /* CaptureButton.swift */; };
+		45BFB1D42055862A005B5E4F /* CameraOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BFB1D32055862A005B5E4F /* CameraOptionsViewController.swift */; };
+		45BFB1D62055D990005B5E4F /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BFB1D52055D990005B5E4F /* ButtonCell.swift */; };
+		45BFB1D8205864AF005B5E4F /* SnappableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BFB1D7205864AF005B5E4F /* SnappableView.swift */; };
+		45BFB1E02058867B005B5E4F /* HistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BFB1DF2058867B005B5E4F /* HistogramView.swift */; };
+		45E43DED20691BAF00DA750B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B592720548D1E00099CAE /* Extensions.swift */; };
+		45E43DEE20691BDC00DA750B /* PhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFDC205ABD96002041D6 /* PhotoSaver.swift */; };
+		859F2C6E92EC428D880DB391 /* Pods_LumenCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D4C8599D00F57105BAE925F /* Pods_LumenCamera.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		452B591F20548CFF00099CAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 452B58E720548BC000099CAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 452B591920548CFF00099CAE;
+			remoteInfo = PhotoLibrary;
+		};
+		452B594920548E9A00099CAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 452B58E720548BC000099CAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 452B594320548E9A00099CAE;
+			remoteInfo = Tools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		452B592620548CFF00099CAE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				452B594C20548E9A00099CAE /* Tools.framework in Embed Frameworks */,
+				452B592220548CFF00099CAE /* PhotoLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0D4C8599D00F57105BAE925F /* Pods_LumenCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LumenCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		452B58EF20548BC000099CAE /* LumenCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LumenCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		452B58F220548BC000099CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		452B58F720548BC000099CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		452B58FA20548BC000099CAE /* LumenCamera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LumenCamera.xcdatamodel; sourceTree = "<group>"; };
+		452B58FF20548BC100099CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		452B590120548BC100099CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452B590820548BDB00099CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		452B590B20548BDB00099CAE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		452B590C20548BDB00099CAE /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		452B590E20548BDB00099CAE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		452B591A20548CFF00099CAE /* PhotoLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhotoLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		452B591C20548CFF00099CAE /* PhotoLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoLibrary.h; sourceTree = "<group>"; };
+		452B591D20548CFF00099CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452B592720548D1E00099CAE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		452B592820548D1E00099CAE /* PhotoLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
+		452B592920548D1E00099CAE /* DataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSources.swift; sourceTree = "<group>"; };
+		452B593320548D9700099CAE /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		452B593420548D9700099CAE /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		452B593520548D9700099CAE /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		452B593A20548DEE00099CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Camera.storyboard; sourceTree = "<group>"; };
+		452B593C20548DEE00099CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Library.storyboard; sourceTree = "<group>"; };
+		452B594420548E9A00099CAE /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		452B594620548E9A00099CAE /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		452B594720548E9A00099CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452B595020548EAD00099CAE /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		452B595120548EAD00099CAE /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		452B595220548EAD00099CAE /* CoreGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphics.swift; sourceTree = "<group>"; };
+		452B595820548EFD00099CAE /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		452B595A20548EFD00099CAE /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		452B595B20548EFD00099CAE /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		452B595D20548EFD00099CAE /* ViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCell.swift; sourceTree = "<group>"; };
+		452B595E20548EFD00099CAE /* LibraryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
+		452B596820548F6B00099CAE /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		452B596B20548F8F00099CAE /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		452B596C20548F8F00099CAE /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		452B596D20548F8F00099CAE /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		452B596E20548F8F00099CAE /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		452B596F20548F8F00099CAE /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		452B597020548F8F00099CAE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		452B597820548FBE00099CAE /* DialSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialSlider.xib; sourceTree = "<group>"; };
+		452B597920548FBE00099CAE /* LMNSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMNSlider.xib; sourceTree = "<group>"; };
+		452B597A20548FBE00099CAE /* PanSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanSlider.swift; sourceTree = "<group>"; };
+		452B597B20548FBE00099CAE /* LMNSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMNSlider.swift; sourceTree = "<group>"; };
+		452B597C20548FBE00099CAE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		452B597D20548FBE00099CAE /* DialSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialSlider.swift; sourceTree = "<group>"; };
+		452B597E20548FBE00099CAE /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		452B597F20548FBE00099CAE /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		452B598020548FBE00099CAE /* ImageGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		452B598220548FBE00099CAE /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		452B59912054902900099CAE /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		452B5995205498FB00099CAE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		452B599720556A3400099CAE /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		4573CFD1205A04C2002041D6 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		4573CFD4205A0D09002041D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4573CFD7205A0EFB002041D6 /* SlideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideButton.swift; sourceTree = "<group>"; };
+		4573CFD8205A0EFB002041D6 /* PMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMButton.swift; sourceTree = "<group>"; };
+		4573CFDC205ABD96002041D6 /* PhotoSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSaver.swift; sourceTree = "<group>"; };
+		45BFB1D020557903005B5E4F /* CaptureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureButton.swift; sourceTree = "<group>"; };
+		45BFB1D32055862A005B5E4F /* CameraOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOptionsViewController.swift; sourceTree = "<group>"; };
+		45BFB1D52055D990005B5E4F /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		45BFB1D7205864AF005B5E4F /* SnappableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappableView.swift; sourceTree = "<group>"; };
+		45BFB1DF2058867B005B5E4F /* HistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistogramView.swift; sourceTree = "<group>"; };
+		A407254832E31B78A51725BC /* Pods-LumenCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LumenCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-LumenCamera/Pods-LumenCamera.release.xcconfig"; sourceTree = "<group>"; };
+		E393C40A1ED26859CCE7802F /* Pods-LumenCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LumenCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LumenCamera/Pods-LumenCamera.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		452B58EC20548BC000099CAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				859F2C6E92EC428D880DB391 /* Pods_LumenCamera.framework in Frameworks */,
+				452B594B20548E9A00099CAE /* Tools.framework in Frameworks */,
+				452B592120548CFF00099CAE /* PhotoLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452B591620548CFF00099CAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452B594020548E9A00099CAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		452B58E620548BC000099CAE = {
+			isa = PBXGroup;
+			children = (
+				452B58F120548BC000099CAE /* LumenCamera */,
+				452B591B20548CFF00099CAE /* PhotoLibrary */,
+				452B594520548E9A00099CAE /* Tools */,
+				452B58F020548BC000099CAE /* Products */,
+				B9540B9F2DEAADB2FAF46E21 /* Pods */,
+				7D120E7F35E7141B5E3A7580 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		452B58F020548BC000099CAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				452B58EF20548BC000099CAE /* LumenCamera.app */,
+				452B591A20548CFF00099CAE /* PhotoLibrary.framework */,
+				452B594420548E9A00099CAE /* Tools.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		452B58F120548BC000099CAE /* LumenCamera */ = {
+			isa = PBXGroup;
+			children = (
+				452B595620548EEC00099CAE /* Classes */,
+				452B596A20548F8F00099CAE /* Extensions */,
+				452B590F20548BDB00099CAE /* Managers */,
+				452B590920548BDB00099CAE /* Models */,
+				452B590720548BDB00099CAE /* Resources */,
+				452B591420548BDE00099CAE /* Storyboards */,
+				452B590A20548BDB00099CAE /* ViewControllers */,
+				452B58F220548BC000099CAE /* AppDelegate.swift */,
+				452B590120548BC100099CAE /* Info.plist */,
+				452B58F920548BC000099CAE /* LumenCamera.xcdatamodeld */,
+			);
+			path = LumenCamera;
+			sourceTree = "<group>";
+		};
+		452B590720548BDB00099CAE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				452B590820548BDB00099CAE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		452B590920548BDB00099CAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		452B590A20548BDB00099CAE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				452B590B20548BDB00099CAE /* BaseViewController.swift */,
+				452B590C20548BDB00099CAE /* RootViewController.swift */,
+				452B590D20548BDB00099CAE /* Camera */,
+				452B593220548D9700099CAE /* Library */,
+				4573CFD3205A0CF6002041D6 /* Settings */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		452B590D20548BDB00099CAE /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				452B590E20548BDB00099CAE /* CameraViewController.swift */,
+				45BFB1D32055862A005B5E4F /* CameraOptionsViewController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		452B590F20548BDB00099CAE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				452B599720556A3400099CAE /* CameraManager.swift */,
+				4573CFD1205A04C2002041D6 /* Preferences.swift */,
+				452B596820548F6B00099CAE /* ThemeManager.swift */,
+				452B5995205498FB00099CAE /* RootCoordinator.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		452B591420548BDE00099CAE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				452B593920548DEE00099CAE /* Camera.storyboard */,
+				452B593B20548DEE00099CAE /* Library.storyboard */,
+				452B58F620548BC000099CAE /* Main.storyboard */,
+				452B58FE20548BC100099CAE /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		452B591B20548CFF00099CAE /* PhotoLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				4573CFDC205ABD96002041D6 /* PhotoSaver.swift */,
+				452B592920548D1E00099CAE /* DataSources.swift */,
+				452B592720548D1E00099CAE /* Extensions.swift */,
+				452B592820548D1E00099CAE /* PhotoLibrary.swift */,
+				452B591C20548CFF00099CAE /* PhotoLibrary.h */,
+				452B591D20548CFF00099CAE /* Info.plist */,
+			);
+			path = PhotoLibrary;
+			sourceTree = "<group>";
+		};
+		452B593220548D9700099CAE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				452B593320548D9700099CAE /* AlbumViewController.swift */,
+				452B593420548D9700099CAE /* PhotosViewController.swift */,
+				452B593520548D9700099CAE /* AlbumsViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		452B594520548E9A00099CAE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				452B595220548EAD00099CAE /* CoreGraphics.swift */,
+				452B595020548EAD00099CAE /* Tools.swift */,
+				452B595120548EAD00099CAE /* UIImage.swift */,
+				452B594620548E9A00099CAE /* Tools.h */,
+				452B594720548E9A00099CAE /* Info.plist */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		452B595620548EEC00099CAE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				452B59902054902900099CAE /* Animations */,
+				4573CFD6205A0EFB002041D6 /* Buttons */,
+				452B595720548EFD00099CAE /* Cells */,
+				452B597720548FBE00099CAE /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		452B595720548EFD00099CAE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				452B595820548EFD00099CAE /* FilterCell.swift */,
+				452B595A20548EFD00099CAE /* PhotoCell.swift */,
+				452B595B20548EFD00099CAE /* AlbumCell.swift */,
+				452B595D20548EFD00099CAE /* ViewControllerCell.swift */,
+				452B595E20548EFD00099CAE /* LibraryCell.swift */,
+				45BFB1D52055D990005B5E4F /* ButtonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		452B596A20548F8F00099CAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				452B596B20548F8F00099CAE /* UIView.swift */,
+				452B596C20548F8F00099CAE /* UIColor.swift */,
+				452B596D20548F8F00099CAE /* String.swift */,
+				452B596E20548F8F00099CAE /* UIButton.swift */,
+				452B596F20548F8F00099CAE /* UIImage.swift */,
+				452B597020548F8F00099CAE /* UILabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		452B597720548FBE00099CAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				452B597820548FBE00099CAE /* DialSlider.xib */,
+				452B597920548FBE00099CAE /* LMNSlider.xib */,
+				452B597A20548FBE00099CAE /* PanSlider.swift */,
+				452B597B20548FBE00099CAE /* LMNSlider.swift */,
+				452B597C20548FBE00099CAE /* CardView.swift */,
+				452B597D20548FBE00099CAE /* DialSlider.swift */,
+				452B597E20548FBE00099CAE /* AlbumView.swift */,
+				452B597F20548FBE00099CAE /* Labels.swift */,
+				452B598020548FBE00099CAE /* ImageGridView.swift */,
+				452B598220548FBE00099CAE /* Divider.swift */,
+				45BFB1D020557903005B5E4F /* CaptureButton.swift */,
+				45BFB1D7205864AF005B5E4F /* SnappableView.swift */,
+				45BFB1DF2058867B005B5E4F /* HistogramView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		452B59902054902900099CAE /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				452B59912054902900099CAE /* Animations.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		4573CFD3205A0CF6002041D6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4573CFD4205A0D09002041D6 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4573CFD6205A0EFB002041D6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4573CFD7205A0EFB002041D6 /* SlideButton.swift */,
+				4573CFD8205A0EFB002041D6 /* PMButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7D120E7F35E7141B5E3A7580 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D4C8599D00F57105BAE925F /* Pods_LumenCamera.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9540B9F2DEAADB2FAF46E21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E393C40A1ED26859CCE7802F /* Pods-LumenCamera.debug.xcconfig */,
+				A407254832E31B78A51725BC /* Pods-LumenCamera.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		452B591720548CFF00099CAE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452B591E20548CFF00099CAE /* PhotoLibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452B594120548E9A00099CAE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452B594820548E9A00099CAE /* Tools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		452B58EE20548BC000099CAE /* LumenCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452B590420548BC100099CAE /* Build configuration list for PBXNativeTarget "LumenCamera" */;
+			buildPhases = (
+				9C57A6DCDEBB813D2408E09E /* [CP] Check Pods Manifest.lock */,
+				452B58EB20548BC000099CAE /* Sources */,
+				452B58EC20548BC000099CAE /* Frameworks */,
+				452B58ED20548BC000099CAE /* Resources */,
+				1B11FA9DAC46D3E7A9E008D8 /* [CP] Embed Pods Frameworks */,
+				71FA0E7D294FDCE1C7933042 /* [CP] Copy Pods Resources */,
+				452B592620548CFF00099CAE /* Embed Frameworks */,
+				45873C072077B39100B7BC46 /* TODO / FIXME */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				452B592020548CFF00099CAE /* PBXTargetDependency */,
+				452B594A20548E9A00099CAE /* PBXTargetDependency */,
+			);
+			name = LumenCamera;
+			productName = LumenCamera;
+			productReference = 452B58EF20548BC000099CAE /* LumenCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		452B591920548CFF00099CAE /* PhotoLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452B592520548CFF00099CAE /* Build configuration list for PBXNativeTarget "PhotoLibrary" */;
+			buildPhases = (
+				452B591520548CFF00099CAE /* Sources */,
+				452B591620548CFF00099CAE /* Frameworks */,
+				452B591720548CFF00099CAE /* Headers */,
+				452B591820548CFF00099CAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoLibrary;
+			productName = PhotoLibrary;
+			productReference = 452B591A20548CFF00099CAE /* PhotoLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		452B594320548E9A00099CAE /* Tools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452B594D20548E9B00099CAE /* Build configuration list for PBXNativeTarget "Tools" */;
+			buildPhases = (
+				452B593F20548E9A00099CAE /* Sources */,
+				452B594020548E9A00099CAE /* Frameworks */,
+				452B594120548E9A00099CAE /* Headers */,
+				452B594220548E9A00099CAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tools;
+			productName = Tools;
+			productReference = 452B594420548E9A00099CAE /* Tools.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		452B58E720548BC000099CAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = mohssenfathi;
+				TargetAttributes = {
+					452B58EE20548BC000099CAE = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
+					452B591920548CFF00099CAE = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
+					};
+					452B594320548E9A00099CAE = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 452B58EA20548BC000099CAE /* Build configuration list for PBXProject "LumenCamera" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 452B58E620548BC000099CAE;
+			productRefGroup = 452B58F020548BC000099CAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				452B58EE20548BC000099CAE /* LumenCamera */,
+				452B591920548CFF00099CAE /* PhotoLibrary */,
+				452B594320548E9A00099CAE /* Tools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		452B58ED20548BC000099CAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452B598520548FBE00099CAE /* LMNSlider.xib in Resources */,
+				452B598420548FBE00099CAE /* DialSlider.xib in Resources */,
+				452B590020548BC100099CAE /* LaunchScreen.storyboard in Resources */,
+				452B591020548BDB00099CAE /* Assets.xcassets in Resources */,
+				452B58F820548BC000099CAE /* Main.storyboard in Resources */,
+				452B593E20548DEE00099CAE /* Library.storyboard in Resources */,
+				452B593D20548DEE00099CAE /* Camera.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452B591820548CFF00099CAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452B594220548E9A00099CAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B11FA9DAC46D3E7A9E008D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LumenCamera/Pods-LumenCamera-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/MTLImage/MTLImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTLImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LumenCamera/Pods-LumenCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45873C072077B39100B7BC46 /* TODO / FIXME */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "TODO / FIXME";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
+		71FA0E7D294FDCE1C7933042 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LumenCamera/Pods-LumenCamera-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C57A6DCDEBB813D2408E09E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LumenCamera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		452B58EB20548BC000099CAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452B598720548FBE00099CAE /* LMNSlider.swift in Sources */,
+				452B596620548EFD00099CAE /* LibraryCell.swift in Sources */,
+				452B596520548EFD00099CAE /* ViewControllerCell.swift in Sources */,
+				452B598C20548FBE00099CAE /* ImageGridView.swift in Sources */,
+				452B598A20548FBE00099CAE /* AlbumView.swift in Sources */,
+				4573CFD5205A0D09002041D6 /* SettingsViewController.swift in Sources */,
+				452B593820548D9700099CAE /* AlbumsViewController.swift in Sources */,
+				452B593620548D9700099CAE /* AlbumViewController.swift in Sources */,
+				452B58FB20548BC000099CAE /* LumenCamera.xcdatamodeld in Sources */,
+				452B597220548F8F00099CAE /* UIColor.swift in Sources */,
+				4573CFDA205A0EFB002041D6 /* PMButton.swift in Sources */,
+				452B591320548BDB00099CAE /* CameraViewController.swift in Sources */,
+				4573CFD2205A04C2002041D6 /* Preferences.swift in Sources */,
+				452B598920548FBE00099CAE /* DialSlider.swift in Sources */,
+				452B598E20548FBE00099CAE /* Divider.swift in Sources */,
+				452B58F320548BC000099CAE /* AppDelegate.swift in Sources */,
+				45BFB1D62055D990005B5E4F /* ButtonCell.swift in Sources */,
+				452B599820556A3400099CAE /* CameraManager.swift in Sources */,
+				45BFB1D8205864AF005B5E4F /* SnappableView.swift in Sources */,
+				452B593720548D9700099CAE /* PhotosViewController.swift in Sources */,
+				452B591220548BDB00099CAE /* RootViewController.swift in Sources */,
+				452B597620548F8F00099CAE /* UILabel.swift in Sources */,
+				452B59922054902900099CAE /* Animations.swift in Sources */,
+				452B596020548EFD00099CAE /* FilterCell.swift in Sources */,
+				45BFB1D42055862A005B5E4F /* CameraOptionsViewController.swift in Sources */,
+				452B597120548F8F00099CAE /* UIView.swift in Sources */,
+				45BFB1E02058867B005B5E4F /* HistogramView.swift in Sources */,
+				452B596220548EFD00099CAE /* PhotoCell.swift in Sources */,
+				452B591120548BDB00099CAE /* BaseViewController.swift in Sources */,
+				452B598B20548FBE00099CAE /* Labels.swift in Sources */,
+				452B5996205498FB00099CAE /* RootCoordinator.swift in Sources */,
+				452B597320548F8F00099CAE /* String.swift in Sources */,
+				452B596320548EFD00099CAE /* AlbumCell.swift in Sources */,
+				4573CFD9205A0EFB002041D6 /* SlideButton.swift in Sources */,
+				452B598820548FBE00099CAE /* CardView.swift in Sources */,
+				452B597520548F8F00099CAE /* UIImage.swift in Sources */,
+				452B596920548F6C00099CAE /* ThemeManager.swift in Sources */,
+				452B598620548FBE00099CAE /* PanSlider.swift in Sources */,
+				45BFB1D120557903005B5E4F /* CaptureButton.swift in Sources */,
+				452B597420548F8F00099CAE /* UIButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452B591520548CFF00099CAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452B592B20548D1E00099CAE /* PhotoLibrary.swift in Sources */,
+				45E43DED20691BAF00DA750B /* Extensions.swift in Sources */,
+				45E43DEE20691BDC00DA750B /* PhotoSaver.swift in Sources */,
+				452B592C20548D1E00099CAE /* DataSources.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452B593F20548E9A00099CAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452B595320548EAE00099CAE /* Tools.swift in Sources */,
+				452B595520548EAE00099CAE /* CoreGraphics.swift in Sources */,
+				452B595420548EAE00099CAE /* UIImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		452B592020548CFF00099CAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 452B591920548CFF00099CAE /* PhotoLibrary */;
+			targetProxy = 452B591F20548CFF00099CAE /* PBXContainerItemProxy */;
+		};
+		452B594A20548E9A00099CAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 452B594320548E9A00099CAE /* Tools */;
+			targetProxy = 452B594920548E9A00099CAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		452B58F620548BC000099CAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452B58F720548BC000099CAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		452B58FE20548BC100099CAE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452B58FF20548BC100099CAE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		452B593920548DEE00099CAE /* Camera.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452B593A20548DEE00099CAE /* Base */,
+			);
+			name = Camera.storyboard;
+			sourceTree = "<group>";
+		};
+		452B593B20548DEE00099CAE /* Library.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452B593C20548DEE00099CAE /* Base */,
+			);
+			name = Library.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		452B590220548BC100099CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		452B590320548BC100099CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		452B590520548BC100099CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E393C40A1ED26859CCE7802F /* Pods-LumenCamera.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P83X3BG446;
+				INFOPLIST_FILE = LumenCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.LumenCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		452B590620548BC100099CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A407254832E31B78A51725BC /* Pods-LumenCamera.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P83X3BG446;
+				INFOPLIST_FILE = LumenCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.LumenCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		452B592320548CFF00099CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P83X3BG446;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PhotoLibrary/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.PhotoLibrary;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		452B592420548CFF00099CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P83X3BG446;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PhotoLibrary/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.PhotoLibrary;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		452B594E20548E9B00099CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P83X3BG446;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Tools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.Tools;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		452B594F20548E9B00099CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P83X3BG446;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Tools/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.Tools;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		452B58EA20548BC000099CAE /* Build configuration list for PBXProject "LumenCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452B590220548BC100099CAE /* Debug */,
+				452B590320548BC100099CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		452B590420548BC100099CAE /* Build configuration list for PBXNativeTarget "LumenCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452B590520548BC100099CAE /* Debug */,
+				452B590620548BC100099CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		452B592520548CFF00099CAE /* Build configuration list for PBXNativeTarget "PhotoLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452B592320548CFF00099CAE /* Debug */,
+				452B592420548CFF00099CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		452B594D20548E9B00099CAE /* Build configuration list for PBXNativeTarget "Tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452B594E20548E9B00099CAE /* Debug */,
+				452B594F20548E9B00099CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		452B58F920548BC000099CAE /* LumenCamera.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				452B58FA20548BC000099CAE /* LumenCamera.xcdatamodel */,
+			);
+			currentVersion = 452B58FA20548BC000099CAE /* LumenCamera.xcdatamodel */;
+			path = LumenCamera.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 452B58E720548BC000099CAE /* Project object */;
+}
