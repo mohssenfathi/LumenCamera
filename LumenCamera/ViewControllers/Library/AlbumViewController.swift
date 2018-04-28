@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import MTLImage
 
 class AlbumViewController: UIViewController {
     @IBOutlet var albumView: AlbumView?
@@ -49,7 +50,8 @@ class AlbumViewController: UIViewController {
     }
     
     @IBAction func edit(_ sender: UIButton) {
-
+        // TODO: TEMP
+        let pic = Picture(image: self.albumView!.currentImage!)
     }
     
     @IBAction func close(_ sender: UIBarButtonItem?) {

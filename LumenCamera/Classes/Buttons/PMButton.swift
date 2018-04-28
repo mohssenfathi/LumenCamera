@@ -141,18 +141,6 @@ class LMNSystemButton: PMButton {
     }
 }
 
-class LMNRoundedButton: PMButton {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        layer.masksToBounds = true
-        layer.cornerRadius = layer.bounds.width/2.0
-        layer.borderWidth = 1.0
-        layer.borderColor = tintColor.cgColor
-    }
-}
-
 func +(left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x + right.x, y: left.y + right.y)
 }

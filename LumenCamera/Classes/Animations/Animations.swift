@@ -14,9 +14,9 @@ extension UIViewController {
         view.animateConstraint(constraint, to: value, duration: duration, animated: animated, completion: completion)
     }
     
-    func animate(duration: Double = 0.35, _ contents: @escaping (() -> ()), completion:(() -> ())? = nil) {
+    func animate(duration: Double = 0.35, delay: Double = 0.0, _ contents: @escaping (() -> ()), completion:(() -> ())? = nil) {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.7, options: [.beginFromCurrentState], animations: {
+            UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.7, options: [.beginFromCurrentState], animations: {
                 contents()
             }) { _ in
                 completion?()

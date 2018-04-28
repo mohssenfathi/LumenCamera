@@ -12,7 +12,7 @@ import AVFoundation
 
 class CameraViewController: BaseViewController {
     
-    @IBOutlet weak var telephotoButton: LMNRoundedButton!
+    @IBOutlet weak var telephotoButton: TelephotoButton!
     @IBOutlet weak var settingsPanGesture: UIPanGestureRecognizer!
     @IBOutlet weak var renderView: View!
     @IBOutlet weak var slider: PanSlider!
@@ -42,6 +42,10 @@ class CameraViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+    }
+    
+    func configureView() {
         
         exitFullscreenButton.layer.masksToBounds = true
         exitFullscreenButton.layer.cornerRadius = exitFullscreenButton.bounds.width/2.0
@@ -53,10 +57,8 @@ class CameraViewController: BaseViewController {
             self.histogramView.update(with: data)
         }
         
-        telephotoButton.isHidden = !camera.isModeSupported(.telephoto)
-        
-        modesDataSource = CameraModesDataSource(collectionView: modeCollectionView, modes: modes, selectionHandler: {
-            self.mode = $0
+        modesDataSource = CameraModesDataSource(collectionView: modeCollectionView, modes: modes, selectionHandler: { mode in
+            self.mode = mode
         })
         
         modeCollectionView.dataSource = modesDataSource
@@ -88,6 +90,8 @@ class CameraViewController: BaseViewController {
     // MARK: - Mode
     func updateMode() {
 
+        telephotoButton.isHidden = !camera.isModeSupported(.telephoto)
+        
         if let height = cameraOptionsViewController?.preferredContentSize.height {
             optionsContainerHeightConstraint.constant = height
         }
@@ -97,7 +101,13 @@ class CameraViewController: BaseViewController {
             renderViewCenterYConstraint.constant = 0.0
             showFullscreen(true)
             captureButton.isInverted = true
+        case .depth:
+            telephotoButton.setTitle(nil, for: .normal)
+            telephotoButton.setImage(#imageLiteral(resourceName: "depth"), for: .normal)
         default:
+            telephotoButton.setImage(nil, for: .normal)
+            telephotoButton.setTitle(camera.mode == .telephoto ? "1x" : "2x", for: .normal)
+
             renderViewCenterYConstraint.constant = -30.0
             showFullscreen(false)
             captureButton.isInverted = false
@@ -136,6 +146,25 @@ class CameraViewController: BaseViewController {
         }
     }
     
+    @IBAction func telephotoButtonPressed(_ sender: UIButton) {
+        if mode == .depth {
+            CameraManager.shared.portrait.showRawDepth = false
+        }
+        else if camera.mode == .telephoto {
+            sender.setTitle("1x", for: .normal)
+            camera.mode = .back
+        } else {
+            sender.setTitle("2x", for: .normal)
+            camera.mode = .telephoto
+        }
+    }
+    
+    @IBAction func depthButtonTouchDown(_ sender: UIButton) {
+        if mode == .depth {
+            CameraManager.shared.portrait.showRawDepth = true
+        }
+    }
+    
     
     // MARK: - Gesture Recognizers
     @IBAction func handleSwipe(_ sender: UISwipeGestureRecognizer) {
@@ -161,7 +190,7 @@ class CameraViewController: BaseViewController {
     }
 
     @IBAction func handleDoubleTap(_ sender: UITapGestureRecognizer) {
-        CameraManager.shared.camera.flip()
+        CameraManager.shared.flip()
     }
     
     override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
@@ -283,5 +312,17 @@ class CameraModesDataSource: NSObject, UICollectionViewDataSource, UICollectionV
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         selectionHandler(modes[indexPath.item])
     }
+    
+}
+
+
+extension CameraViewController: UIGestureRecognizerDelegate {
+    
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//        if gestureRecognizer is UISwipeGestureRecognizer {
+//            return true
+//        }
+//        return false
+//    }
     
 }

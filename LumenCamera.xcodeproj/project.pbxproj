@@ -56,6 +56,7 @@
 		452B59922054902900099CAE /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B59912054902900099CAE /* Animations.swift */; };
 		452B5996205498FB00099CAE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B5995205498FB00099CAE /* RootCoordinator.swift */; };
 		452B599820556A3400099CAE /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B599720556A3400099CAE /* CameraManager.swift */; };
+		4547614C208D3A96002100EF /* TelephotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4547614B208D3A96002100EF /* TelephotoButton.swift */; };
 		4573CFD2205A04C2002041D6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFD1205A04C2002041D6 /* Preferences.swift */; };
 		4573CFD5205A0D09002041D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFD4205A0D09002041D6 /* SettingsViewController.swift */; };
 		4573CFD9205A0EFB002041D6 /* SlideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573CFD7205A0EFB002041D6 /* SlideButton.swift */; };
@@ -156,6 +157,7 @@
 		452B59912054902900099CAE /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		452B5995205498FB00099CAE /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		452B599720556A3400099CAE /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		4547614B208D3A96002100EF /* TelephotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelephotoButton.swift; sourceTree = "<group>"; };
 		4573CFD1205A04C2002041D6 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4573CFD4205A0D09002041D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4573CFD7205A0EFB002041D6 /* SlideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideButton.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 			children = (
 				4573CFD7205A0EFB002041D6 /* SlideButton.swift */,
 				4573CFD8205A0EFB002041D6 /* PMButton.swift */,
+				4547614B208D3A96002100EF /* TelephotoButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				452B58F320548BC000099CAE /* AppDelegate.swift in Sources */,
 				45BFB1D62055D990005B5E4F /* ButtonCell.swift in Sources */,
 				452B599820556A3400099CAE /* CameraManager.swift in Sources */,
+				4547614C208D3A96002100EF /* TelephotoButton.swift in Sources */,
 				45BFB1D8205864AF005B5E4F /* SnappableView.swift in Sources */,
 				452B593720548D9700099CAE /* PhotosViewController.swift in Sources */,
 				452B591220548BDB00099CAE /* RootViewController.swift in Sources */,

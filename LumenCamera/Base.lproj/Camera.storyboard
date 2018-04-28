@@ -123,22 +123,24 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="205-Jb-LMn">
                                                         <rect key="frame" x="250" y="0.0" width="125" height="96"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcY-Eh-QOh" customClass="LMNRoundedButton" customModule="LumenCamera" customModuleProvider="target">
-                                                                <rect key="frame" x="44.666666666666686" y="30.666666666666629" width="36" height="36"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcY-Eh-QOh" customClass="TelephotoButton" customModule="LumenCamera" customModuleProvider="target">
+                                                                <rect key="frame" x="43.666666666666686" y="29.666666666666629" width="38" height="38"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="mcY-Eh-QOh" secondAttribute="height" multiplier="1:1" id="Nms-gI-3ah"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                                                <state key="normal" title="2x"/>
+                                                                <state key="normal" title="1x">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="lumenGreyColor">
                                                                         <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                        <real key="value" value="2"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="depthButtonTouchDown:" destination="xj5-sh-MMv" eventType="touchDown" id="nYF-B1-Orb"/>
+                                                                    <action selector="telephotoButtonPressed:" destination="xj5-sh-MMv" eventType="touchUpInside" id="RzE-yT-zgG"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -293,10 +295,21 @@
                                     <constraint firstAttribute="trailing" secondItem="2iC-DM-YdL" secondAttribute="trailing" id="toc-6T-qMg"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibk-Cu-mTS">
+                                <rect key="frame" x="16" y="597" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="BeU-gH-OqW"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="l7H-v3-K30" kind="embed" id="pOk-2a-PnQ"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="66C-TD-GPL" firstAttribute="top" secondItem="Ibk-Cu-mTS" secondAttribute="bottom" constant="11" id="0La-qH-M0G"/>
                             <constraint firstItem="Dqa-e5-mMJ" firstAttribute="leading" secondItem="HVg-4M-tTj" secondAttribute="leading" id="7GT-fg-PyQ"/>
+                            <constraint firstItem="Ibk-Cu-mTS" firstAttribute="leading" secondItem="HVg-4M-tTj" secondAttribute="leading" constant="16" id="9Oi-bX-8og"/>
                             <constraint firstItem="cfF-lY-KEv" firstAttribute="trailing" secondItem="HVg-4M-tTj" secondAttribute="trailing" id="EEP-9D-dYV"/>
                             <constraint firstItem="Bpt-en-xfE" firstAttribute="leading" secondItem="HVg-4M-tTj" secondAttribute="leading" id="Qkj-C3-HbT"/>
                             <constraint firstItem="HVg-4M-tTj" firstAttribute="trailing" secondItem="Bpt-en-xfE" secondAttribute="trailing" id="S12-sc-hkB"/>
@@ -311,6 +324,7 @@
                             <constraint firstItem="ECf-oS-N6J" firstAttribute="trailing" secondItem="HVg-4M-tTj" secondAttribute="trailing" id="pTW-8M-yEH"/>
                             <constraint firstItem="cfF-lY-KEv" firstAttribute="leading" secondItem="HVg-4M-tTj" secondAttribute="leading" id="tHz-QT-Iju"/>
                             <constraint firstItem="ECf-oS-N6J" firstAttribute="top" secondItem="Bpt-en-xfE" secondAttribute="bottom" id="taH-Da-mIx"/>
+                            <constraint firstItem="HVg-4M-tTj" firstAttribute="trailing" secondItem="Ibk-Cu-mTS" secondAttribute="trailing" constant="16" id="x85-fv-Ato"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HVg-4M-tTj"/>
                         <connections>
@@ -354,11 +368,13 @@
                 <swipeGestureRecognizer direction="right" id="AIW-Nh-qP5">
                     <connections>
                         <action selector="handleSwipe:" destination="xj5-sh-MMv" id="omX-5g-KFF"/>
+                        <outlet property="delegate" destination="xj5-sh-MMv" id="kFC-om-enf"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="CjR-El-V9N">
                     <connections>
                         <action selector="handleSwipe:" destination="xj5-sh-MMv" id="Nq0-rX-I8y"/>
+                        <outlet property="delegate" destination="xj5-sh-MMv" id="0dV-DQ-GXy"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -654,6 +670,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEy-zS-kA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZJc-1n-o4h">
+            <objects>
+                <viewController id="l7H-v3-K30" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rk3-62-mtY">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-pa-p8W">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jJE-cH-iHn">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCell" id="GUC-pp-Xpm" customClass="ButtonCell" customModule="LumenCamera" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-1" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y5Y-pa-p8W" firstAttribute="leading" secondItem="Rk3-62-mtY" secondAttribute="leading" id="QZH-op-gAv"/>
+                            <constraint firstAttribute="bottom" secondItem="Y5Y-pa-p8W" secondAttribute="bottom" id="gp6-3P-Ddb"/>
+                            <constraint firstItem="Y5Y-pa-p8W" firstAttribute="top" secondItem="Rk3-62-mtY" secondAttribute="top" id="mGY-TA-OZb"/>
+                            <constraint firstAttribute="trailing" secondItem="Y5Y-pa-p8W" secondAttribute="trailing" id="rB2-br-sdh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IMJ-jv-fMF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUL-wb-wXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="587"/>
         </scene>
     </scenes>
     <resources>

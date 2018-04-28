@@ -47,6 +47,19 @@ class CameraManager {
         }
     }
     
+    func filter(image: UIImage, completion: @escaping (_ filteredImage: UIImage?) -> ()) {
+        
+        DispatchQueue.global(qos: .background).async {
+            let picture = Picture(image: image)
+            picture.addTarget(self.filterGroup)
+            self.filterGroup.process()
+            let filtered = self.filterGroup.texture?.image
+            DispatchQueue.main.async {
+                completion(filtered)
+            }
+        }
+    }
+    
     // MARK: - Photo Capture
     func takePhoto(_ completion: @escaping CaptureCallback) {
         
@@ -65,19 +78,40 @@ class CameraManager {
             }
             
         } else {
+            
             camera.takePhoto { photo, metadata, error in
                 
-                if let photo = photo {
-                    PhotoLibrary.savePhoto(photo, to: CameraManager.albumName, completion: { (success, error) in
-                        // TODO: Handle save error
-                    })
+                guard let photo = photo else {
+                    completion(nil, metadata, error)
+                    return
                 }
                 
-                completion(photo, metadata, error)
+//                self.filter(image: photo, completion: { filteredPhoto in
+                self.filterGroup.filter(photo, completion: { filteredPhoto in
+                    
+                    guard let filteredPhoto = filteredPhoto else {
+                        completion(nil, metadata, error)
+                        return
+                    }
+                    
+                    PhotoLibrary.savePhoto(filteredPhoto, to: CameraManager.albumName, completion: { (success, error) in
+                        // TODO: Handle save error
+                    })
+                    
+                    completion(filteredPhoto, metadata, error)
+                })
+                
             }
         }
     }
     
+    func flip() {
+        if isDepthModeEnabled {
+            portrait.reset()
+        }
+        camera.flip()
+    }
+
     
     // MARK: - Histogram
     let histogram = Histogram()
@@ -92,13 +126,15 @@ class CameraManager {
             }
         }
     }
-
-    // MARK: - Histogram
+    
+    // MARK: - Portrait
     let portrait = Portrait()
     
     var isDepthModeEnabled: Bool = false {
         didSet {
             if isDepthModeEnabled {
+                
+                portrait.reset()
                 
                 // TODO: .depthFront is crashing due to memory issues for some reason
                 camera.mode = .depthRear
