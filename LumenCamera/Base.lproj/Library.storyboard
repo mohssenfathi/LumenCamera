@@ -702,11 +702,35 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-br-N5d">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3w-vQ-I0P">
+                                                <rect key="frame" x="292" y="10" width="73" height="26"/>
+                                                <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
+                                                <state key="normal" title="DEPTH"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="lumenGreyColor">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="depthButtonPressed:" destination="Dwb-xm-2sf" eventType="touchUpInside" id="Nzv-ME-4Ld"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="C3w-vQ-I0P" secondAttribute="trailing" constant="10" id="1lT-ax-Dke"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Aog-br-N5d" secondAttribute="trailing" id="3O1-Uw-O8i"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="T9v-Hm-zDf" secondAttribute="trailing" id="6MH-Bg-6fk"/>
+                                            <constraint firstItem="C3w-vQ-I0P" firstAttribute="top" secondItem="ckB-0c-jzO" secondAttribute="top" constant="10" id="9KQ-Bg-JrP"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="T9v-Hm-zDf" secondAttribute="bottom" id="9XC-VV-WM0"/>
                                             <constraint firstItem="T9v-Hm-zDf" firstAttribute="leading" secondItem="ckB-0c-jzO" secondAttribute="leadingMargin" id="DDX-ys-0fp"/>
                                             <constraint firstItem="Aog-br-N5d" firstAttribute="top" secondItem="ckB-0c-jzO" secondAttribute="topMargin" id="Dim-nk-64n"/>
@@ -832,6 +856,7 @@
                                     <outlet property="activityIndicator" destination="fkC-0F-QOF" id="OdA-yg-ati"/>
                                     <outlet property="collectionView" destination="fAD-Bh-LaO" id="o4y-Cg-4ia"/>
                                     <outlet property="collectionViewContainer" destination="boZ-yo-Iew" id="Nyo-pU-rsW"/>
+                                    <outlet property="depthButton" destination="C3w-vQ-I0P" id="YUd-po-CS7"/>
                                     <outlet property="forceTouchButton" destination="iHT-FK-fzR" id="d6q-Ed-cgh"/>
                                     <outlet property="imageView" destination="Aog-br-N5d" id="MHh-wD-uiJ"/>
                                     <outlet property="imageViewHeightConstraint" destination="mOV-BW-d0M" id="7ha-Tm-OYH"/>
@@ -895,6 +920,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE5-xj-WyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Dwb-xm-2sf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2952.8000000000002" y="-157.38916256157637"/>
         </scene>

@@ -11,6 +11,7 @@ import Photos
 import PhotosUI
 import PhotoLibrary
 import Tools
+import MTLImage
 
 class AlbumView: UIView {
 
@@ -19,6 +20,7 @@ class AlbumView: UIView {
     @IBOutlet var livePhotoIcon: UIButton!
     @IBOutlet var forceTouchButton: ForceTouchButton!
     
+    @IBOutlet var depthButton: UIButton!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var collectionViewContainer: UIView!
@@ -93,7 +95,45 @@ class AlbumView: UIView {
         cacheIndex += cacheIncrement
     }
     
+    func filterDepthMap(_ depthMap: CVPixelBuffer) -> MTLTexture? {
+        
+        let input = TextureInput(textureProvider: {
+            return nil
+        })
+        input.pixelBufferProvider = {
+            return depthMap
+        }
+        
+        let filterGroup = FilterGroup()
+        let dr = DepthRenderer()
+        filterGroup.add(dr)
+        
+        input --> filterGroup
+        
+        filterGroup.update()
+        filterGroup.process()
+        
+        let texture = filterGroup.texture
+        
+        return texture
+    }
+    
     func updateImageView(with asset: PHAsset, completion: (() -> ())? = nil) {
+        
+//        asset.depthData { (depthData) in
+//            guard var depthData = depthData else {
+//                return
+//            }
+//
+//            if depthData.depthDataType != kCVPixelFormatType_DisparityFloat32 {
+//                depthData = depthData.converting(toDepthDataType: kCVPixelFormatType_DisparityFloat32)
+//            }
+//
+//            let depthMap = depthData.depthDataMap
+//
+//        }
+//
+//        return
         
         if asset.isLivePhoto {
 
@@ -110,8 +150,13 @@ class AlbumView: UIView {
             imageView.isHidden = false
             livePhotoContainerView.isHidden = true
             
+            let size = CGSize(
+                width: imageView.bounds.size.width * UIScreen.main.scale,
+                height: imageView.bounds.size.height * UIScreen.main.scale
+            )
+            
             asset.image(
-                size: imageView.bounds.size * UIScreen.main.scale,
+                size: size,
                 deliveryMode: .highQualityFormat,
                 synchronous: false,
                 progress: nil, { image, info in
@@ -119,6 +164,11 @@ class AlbumView: UIView {
             })
         }
     }
+    
+    @IBAction func depthButtonPressed(_ sender: UIButton) {
+        
+    }
+    
     
     func showImageView(_ show: Bool, animated: Bool = true, completion: (() -> ())? = nil) {
         let value = show ? bounds.height * 0.4 : 0.0
@@ -134,6 +184,7 @@ class AlbumView: UIView {
     fileprivate var cacheIndex: Int = 0
     fileprivate var cacheIncrement: Int = 100
 }
+
 
 // MARK: - UICollectionView
 

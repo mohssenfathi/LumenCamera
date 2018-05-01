@@ -43,7 +43,6 @@ class AlbumViewController: UIViewController {
                 }
                 
                 self.isEditButtonShown = true
-                self.albumView?.currentImage = image
                 self.albumView?.showImageView(true, animated: true, completion: nil)
             })
         }

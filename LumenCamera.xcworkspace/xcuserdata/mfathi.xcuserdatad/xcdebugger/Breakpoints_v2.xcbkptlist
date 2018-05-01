@@ -20,12 +20,156 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../iOS/MTLImage/MTLImage/Sources/iOS/Core/Camera/CaptureProcessor.swift"
-            timestampString = "546633893.481746"
+            timestampString = "546715970.363475"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "214"
             endingLineNumber = "214"
             landmarkName = "process(photo:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+            timestampString = "546715970.364017"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "image(size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+            timestampString = "546715970.364092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "image(size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+            timestampString = "546715970.364158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "image(size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+            timestampString = "546715970.364222"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "image(size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+            timestampString = "546715970.364283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "image(size:deliveryMode:synchronous:progress:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+            timestampString = "546715970.3643399"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "image(size:deliveryMode:synchronous:progress:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in (extension in MTLImage):__ObjC.PHAsset.image(size: __C.CGSize, deliveryMode: __C.PHImageRequestOptionsDeliveryMode, synchronous: Swift.Bool, progress: Swift.Optional&lt;(Swift.Double, Swift.Optional&lt;Swift.Error&gt;, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; ()&gt;, (Swift.Optional&lt;__ObjC.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MTLImage"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfathi/Developer/iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+                  timestampString = "546816427.39873"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in (extension in MTLImage):__ObjC.PHAsset.image(size: __C.CGSize, deliveryMode: __C.PHImageRequestOptionsDeliveryMode, synchronous: Swift.Bool, progress: Swift.Optional&lt;(Swift.Double, Swift.Optional&lt;Swift.Error&gt;, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; ()&gt;, (Swift.Optional&lt;__ObjC.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MTLImage"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mfathi/Developer/iOS/MTLImage/MTLImage/Sources/iOS/Core/PhotoLibrary/Photos-Extensions.swift"
+                  timestampString = "546816427.401993"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../iOS/MTLImage/MTLImage/Sources/Shared/Filters/ColorGenerator.swift"
+            timestampString = "546816426.873255"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
